@@ -56,5 +56,11 @@ while want_to_play:
         else:
             print("You win the game!!")
 
-    play_again = input("Do you want to play again (Y/N)? ")
+    while True:
+        play_again = input("Do you want to play again (Y/N)? ").upper()
+        if play_again in ["Y","N"]:
+            break
+        else:
+            print("You didn't type a Y or N...")
+
     want_to_play = (play_again == "Y")
